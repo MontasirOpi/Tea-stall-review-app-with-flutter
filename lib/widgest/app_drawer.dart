@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 class AppDrawer extends StatelessWidget {
   const AppDrawer({
     super.key,
@@ -20,7 +21,8 @@ class AppDrawer extends StatelessWidget {
               children: [
                 CircleAvatar(
                   radius: 30,
-                  backgroundImage: AssetImage('assets/profile.jpg'), // Update with your profile image asset
+                  backgroundImage: AssetImage(
+                      'assets/profile.jpg'), // Update with your profile image asset
                 ),
                 SizedBox(height: 10),
                 Text(
@@ -44,16 +46,23 @@ class AppDrawer extends StatelessWidget {
             leading: const Icon(Icons.home),
             title: const Text('Home'),
             onTap: () {
-              Navigator.pop(context);
-              // Add navigation or action here
+              // Navigator.pop(context);
+              // Navigator.push(context,
+              //     MaterialPageRoute(builder: (context) => const HomeScreen()));
+              // // Add navigation or action here
             },
           ),
           ListTile(
             leading: const Icon(Icons.star),
             title: const Text('Post Review'),
             onTap: () {
-              Navigator.pop(context);
-              // Add navigation or action here
+              // Navigator.pop(context);
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute(
+              //     builder: (context) => const PostReviewScreen(),
+              //   ),
+              // );
             },
           ),
           ListTile(
